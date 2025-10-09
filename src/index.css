@@ -8,43 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 214 31% 6%;
-    --background-secondary: 213 39% 8%;
-    --foreground: 210 22% 92%;
+    --background: 0 0% 5%;
+    --background-secondary: 0 0% 7%;
+    --foreground: 0 0% 95%;
 
-    --card: 213 39% 8%;
-    --card-foreground: 210 22% 92%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 213 39% 8%;
-    --popover-foreground: 210 22% 92%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
 
     --primary: 213 89% 53%;
-    --primary-foreground: 210 22% 92%;
+    --primary-foreground: 0 0% 95%;
     --primary-glow: 213 89% 63%;
 
-    --secondary: 215 16% 61%;
-    --secondary-foreground: 210 22% 92%;
+    --secondary: 0 0% 60%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 217 19% 27%;
-    --muted-foreground: 215 16% 61%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
 
     --accent: 213 89% 53%;
-    --accent-foreground: 210 22% 92%;
+    --accent-foreground: 0 0% 95%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 22% 92%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 0 0% 100% / 0.06;
+    --border: 0 0% 100% / 0.08;
     --input: 0 0% 100% / 0.08;
     --ring: 213 89% 53%;
 
-    --radius: 1rem;
+    --radius: 1.25rem;
 
-    --glass-bg: 0 0% 100% / 0.03;
-    --glass-border: 0 0% 100% / 0.06;
+    --glass-bg: 0 0% 100% / 0.02;
+    --glass-border: 0 0% 100% / 0.08;
     
-    --shadow-glow: 0 8px 24px hsl(213 89% 53% / 0.18);
-    --shadow-hover: 0 12px 32px hsl(213 89% 53% / 0.25);
+    --shadow-glow: 0 8px 32px hsl(213 89% 53% / 0.15);
+    --shadow-hover: 0 12px 40px hsl(213 89% 53% / 0.2);
   }
 }
 
@@ -64,19 +64,25 @@ All colors MUST be HSL.
 
 @layer utilities {
   .glass-card {
-    @apply bg-[var(--glass-bg)] backdrop-blur-xl rounded-2xl;
-    border: 0.5px solid hsl(var(--glass-border));
+    @apply bg-[var(--glass-bg)] backdrop-blur-md rounded-3xl;
+    border: 1px solid hsl(var(--glass-border));
   }
 
   .glow-hover {
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .glow-hover:hover {
     box-shadow: var(--shadow-glow);
+    border-color: hsl(var(--border));
   }
 
   .text-gradient {
     @apply bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent;
+  }
+
+  .outline-card {
+    @apply bg-transparent backdrop-blur-sm rounded-3xl;
+    border: 1px solid hsl(var(--glass-border));
   }
 }

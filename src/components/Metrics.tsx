@@ -25,21 +25,21 @@ const metrics = [
 
 export const Metrics = () => {
   return (
-    <section id="metrics" className="py-24 relative">
+    <section id="metrics" className="py-32 relative">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-6">
           {metrics.map((metric, index) => (
             <div
               key={index}
-              className="glass-card p-8 text-center glow-hover"
+              className="outline-card p-8 text-center glow-hover backdrop-blur-sm"
             >
-              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <metric.icon className="w-6 h-6 text-primary" />
+              <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center mx-auto mb-5 border border-primary/10">
+                <metric.icon className="w-7 h-7 text-primary" />
               </div>
-              <div className="text-3xl font-heading font-bold text-gradient mb-2">
+              <div className="text-4xl font-heading font-bold text-gradient mb-2">
                 {metric.value}
               </div>
-              <div className="text-secondary text-sm">
+              <div className="text-foreground/60 text-sm">
                 {metric.label}
               </div>
             </div>
