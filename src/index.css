@@ -34,14 +34,14 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 22% 92%;
 
-    --border: 0 0% 100% / 0.12;
-    --input: 0 0% 100% / 0.12;
+    --border: 0 0% 100% / 0.06;
+    --input: 0 0% 100% / 0.08;
     --ring: 213 89% 53%;
 
     --radius: 1rem;
 
-    --glass-bg: 0 0% 100% / 0.05;
-    --glass-border: 0 0% 100% / 0.12;
+    --glass-bg: 0 0% 100% / 0.03;
+    --glass-border: 0 0% 100% / 0.06;
     
     --shadow-glow: 0 8px 24px hsl(213 89% 53% / 0.18);
     --shadow-hover: 0 12px 32px hsl(213 89% 53% / 0.25);
@@ -64,7 +64,8 @@ All colors MUST be HSL.
 
 @layer utilities {
   .glass-card {
-    @apply bg-[var(--glass-bg)] backdrop-blur-xl border border-[var(--glass-border)] rounded-2xl;
+    @apply bg-[var(--glass-bg)] backdrop-blur-xl rounded-2xl;
+    border: 0.5px solid hsl(var(--glass-border));
   }
 
   .glow-hover {
