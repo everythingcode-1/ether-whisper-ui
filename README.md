@@ -1,73 +1,92 @@
-# Welcome to your Lovable project
+# Ether Whisper UI
 
-## Project info
+A modern, responsive web interface for Ether Whisper - a decentralized communication platform built on blockchain technology.
 
-**URL**: https://lovable.dev/projects/ccb7b3de-72fd-49b9-956e-d89e8b1c447a
+## Project Overview
 
-## How can I edit this code?
+Ether Whisper UI provides a sleek, user-friendly interface for interacting with decentralized messaging services. Built with cutting-edge web technologies to deliver a seamless user experience.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- 🚀 **Modern UI/UX** - Clean, intuitive interface with smooth animations
+- 🌙 **Dark Theme** - Eye-friendly dark mode design
+- 📱 **Responsive Design** - Works seamlessly on desktop and mobile devices
+- ⚡ **Fast Performance** - Optimized with Vite for lightning-fast development and builds
+- 🔧 **Component-Based** - Built with reusable React components and shadcn/ui
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ccb7b3de-72fd-49b9-956e-d89e8b1c447a) and start prompting.
+## Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS with custom design system
+- **UI Components**: shadcn/ui
+- **State Management**: React Query
+- **Routing**: React Router
+- **Development**: ESLint, TypeScript
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v18 or higher)
+- npm or yarn package manager
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+# Clone the repository
+git clone https://github.com/your-username/ether-whisper-ui.git
+cd ether-whisper-ui
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+### Development
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The development server will start at `http://localhost:8080` by default.
 
-**Use GitHub Codespaces**
+## Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Page components
+├── hooks/         # Custom React hooks
+├── lib/           # Utility functions
+└── assets/        # Static assets
+```
 
-## What technologies are used for this project?
+## Configuration
 
-This project is built with:
+The project uses several configuration files:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- `tailwind.config.ts` - Tailwind CSS configuration with custom theme
+- `vite.config.ts` - Vite build tool configuration
+- `eslint.config.js` - ESLint linting rules
+- `tsconfig.json` - TypeScript compiler options
 
-## How can I deploy this project?
+## Contributing
 
-Simply open [Lovable](https://lovable.dev/projects/ccb7b3de-72fd-49b9-956e-d89e8b1c447a) and click on Share -> Publish.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## Can I connect a custom domain to my Lovable project?
+## License
 
-Yes, you can!
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Support
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+For support and questions, please open an issue in the GitHub repository.

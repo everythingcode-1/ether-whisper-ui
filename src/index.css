@@ -85,4 +85,26 @@ All colors MUST be HSL.
     @apply bg-transparent backdrop-blur-sm rounded-3xl;
     border: 1px solid hsl(var(--glass-border));
   }
+
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background;
+  }
+
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.3s ease-out;
+  }
 }
