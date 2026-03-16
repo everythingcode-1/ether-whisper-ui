@@ -46,6 +46,32 @@ All colors MUST be HSL.
     --shadow-glow: 0 8px 32px hsl(213 89% 53% / 0.15);
     --shadow-hover: 0 12px 40px hsl(213 89% 53% / 0.2);
   }
+
+  .dark {
+    --background: 0 0% 3%;
+    --background-secondary: 0 0% 5%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 213 89% 58%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 213 89% 68%;
+    --secondary: 0 0% 65%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 213 89% 58%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 100% / 0.06;
+    --input: 0 0% 100% / 0.06;
+    --ring: 213 89% 58%;
+    --glass-bg: 0 0% 100% / 0.03;
+    --glass-border: 0 0% 100% / 0.06;
+  }
 }
 
 @layer base {
@@ -54,7 +80,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -130,6 +156,92 @@ All colors MUST be HSL.
 
   .animate-float {
     animation: float 3s ease-in-out infinite;
+  }
+
+  /* Enhanced micro-interactions */
+  .hover-scale {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  .hover-rotate {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-rotate:hover {
+    transform: rotate(5deg);
+  }
+
+  .bounce-in {
+    animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wiggle {
+    animation: wiggle 0.5s ease-in-out;
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(255, 255, 255, 0.1) 50%, 
+      transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  .pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
+
+  .slide-in-elliptic-top {
+    animation: slide-in-elliptic-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .tilt-shaking {
+    animation: tilt-shaking 0.3s ease-in-out infinite;
+  }
+
+  @keyframes bounce-in {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes wiggle {
+    0%, 7% { transform: rotateZ(0); }
+    15% { transform: rotateZ(-15deg); }
+    20% { transform: rotateZ(10deg); }
+    25% { transform: rotateZ(-10deg); }
+    30% { transform: rotateZ(6deg); }
+    35% { transform: rotateZ(-4deg); }
+    40%, 100% { transform: rotateZ(0); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+
+  @keyframes slide-in-elliptic-top {
+    0% { transform: translateY(-100%) scaleY(0); opacity: 0; }
+    100% { transform: translateY(0) scaleY(1); opacity: 1; }
+  }
+
+  @keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
   }
 
   .glass-morphism {
